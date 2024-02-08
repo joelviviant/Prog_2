@@ -1,0 +1,50 @@
+TP1
+
+Ejercicio 1
+
+clases
+	Agenda_Personal
+		
+	Reunion
+		LUGAR
+		QUIENES
+		TEMA
+		DURACION
+	Persona	
+
+Ejercicio 2
+	
+	impuesto
+		dif tip de imp
+	ciudad
+		int gastos
+		get deficit
+	provincia
+	
+
+Ejercicio 3
+
+	Turno
+	cancha
+	usuario
+
+Ejercicio 4
+
+	Peluquero
+	turno
+	cliente
+	agenda
+	
+TP2
+
+Ejercicio 1	
+
+	cliente
+	vuelo
+	reserva
+	pasaje
+	
+
+Ejercicio 2
+
+	

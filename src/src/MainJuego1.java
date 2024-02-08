@@ -8,9 +8,7 @@ public class MainJuego1 {
 //		Juego1 jj = new Juego1();
 		Juego1 jj2 = new Juego1(3);
 		Juego1 jj = new Juego1(9,11);
-		
-		
-		
+
 		System.out.println(jj.getPuntosJugador1());
 		System.out.println(jj.getPuntosJugador2());
 		
@@ -18,10 +16,7 @@ public class MainJuego1 {
 		
 		System.out.println(jj.getPuntosJugador1());
 		System.out.println(jj.getPuntosJugador2());
-		
-	 	
-	 
-		
+
 		System.out.println(jj2.getPuntosJugador1());
 		System.out.println(jj2.getPuntosJugador2());
 		
