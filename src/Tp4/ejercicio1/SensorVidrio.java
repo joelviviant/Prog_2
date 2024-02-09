@@ -1,8 +1,7 @@
-package Tp4;
+package Tp4.ejercicio1;
 
-public class SensorMovimiento extends Sensor{
-
-    public SensorMovimiento(String zonaControlada) {
+public class SensorVidrio extends Sensor{
+    public SensorVidrio(String zonaControlada) {
         super(zonaControlada);
     }
 

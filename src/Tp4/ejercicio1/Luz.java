@@ -1,4 +1,4 @@
-package Tp4;
+package Tp4.ejercicio1;
 
 class Luz {
     public void encender() {

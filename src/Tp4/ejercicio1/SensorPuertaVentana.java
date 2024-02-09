@@ -1,4 +1,4 @@
-package Tp4;
+package Tp4.ejercicio1;
 
 public class SensorPuertaVentana extends Sensor{
     public SensorPuertaVentana(String zonaControlada) {
