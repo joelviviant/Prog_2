@@ -14,16 +14,33 @@ public class Main{
 //        System.out.println(persona1.toString());
 
 
-        Electrodomestico electrodomestico1 = new Electrodomestico("heladera","blanco",80,20000,60);
-        System.out.println(electrodomestico1.toString());
-        if (electrodomestico1.esAltaGama()){
-            System.out.println("es alta gama");
-        }
-        if (electrodomestico1.esBajoConsumo()) {
-            System.out.println("es bajo consumo");
-        }else {
-            System.out.println("es alto consumo");
-        }
+//        Electrodomestico electrodomestico1 = new Electrodomestico("heladera","blanco",80,20000,60);
+//        System.out.println(electrodomestico1.toString());
+//        if (electrodomestico1.esAltaGama()){
+//            System.out.println("es alta gama");
+//        }
+//        if (electrodomestico1.esBajoConsumo()) {
+//            System.out.println("es bajo consumo");
+//        }else {
+//            System.out.println("es alto consumo");
+//        }
+
+            Episodio episodio1 = new Episodio("1", "Conoce los ladrones", true, 3);
+            Episodio episodio2 = new Episodio("2", "busca los ladrones", true, 4);
+            Episodio episodio3 = new Episodio("3", "roba los ladrones", false, 5);
+            Episodio episodio4 = new Episodio("4", "mata los ladrones", true, 7);
+            Temporada temporada1 = new Temporada(1, 4);
+            Serie serie = new Serie("La Casa de Papel", "Roban un banco", "Joel Viviant", "Accion",1);
+
+
+            temporada1.agregarEpisodio(episodio1);
+            temporada1.agregarEpisodio(episodio2);
+            temporada1.agregarEpisodio(episodio3);
+            temporada1.agregarEpisodio(episodio4);
+            serie.agregarTemporada(temporada1);
+
+            System.out.println(serie.episodiosVistosPorSerie());
+
     }
 
 
