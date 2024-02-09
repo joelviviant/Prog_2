@@ -17,7 +17,7 @@ public class Alarma {
 
     public void comprobar(){
         for (Sensor s : sensores) {
-            if (s.sensorActivado()){
+            if (s.movimientoDetectado){
                 activarAlarma(s.getZonaControlada());
             }
         }
