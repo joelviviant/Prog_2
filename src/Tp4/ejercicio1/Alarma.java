@@ -2,15 +2,10 @@ package Tp4.ejercicio1;
 
 public class Alarma {
     Sensor sensores [];
-    boolean vidrioRoto;
-    boolean puertaVentanaAbierta;
-    boolean movimientoDetectado;
+
     int cantSensores;
 
     public Alarma(int cantSensores) {
-        vidrioRoto = false;
-        puertaVentanaAbierta = false;
-        movimientoDetectado = false;
         sensores = new Sensor[cantSensores];
     }
 
