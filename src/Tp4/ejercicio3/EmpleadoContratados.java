@@ -1,4 +1,4 @@
-package Tp4.ejercicio2;
+package Tp4.ejercicio3;
 
 public class EmpleadoContratados extends Empleado{
     public EmpleadoContratados(String nombre, int sueldo) {

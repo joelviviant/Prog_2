@@ -1,4 +1,4 @@
-package Tp4.ejercicio2;
+package Tp4.ejercicio3;
 
 public class EmpleadoComision extends Empleado{
 
