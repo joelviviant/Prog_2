@@ -1,4 +1,6 @@
-package TP5;
+package TP5.ejercicio1;
+
+import TP5.ejercicio1.Pila;
 
 public class Main {
     public static void main(String[] args) {

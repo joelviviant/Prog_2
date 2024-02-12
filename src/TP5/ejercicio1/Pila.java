@@ -1,4 +1,4 @@
-package TP5;
+package TP5.ejercicio1;
 
 import java.util.EmptyStackException;
 
