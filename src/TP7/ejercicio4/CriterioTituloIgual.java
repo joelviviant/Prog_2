@@ -1,6 +1,6 @@
 package TP7.ejercicio4;
 
-public class CriterioTituloIgual extends Criterio{
+public class CriterioTituloIgual implements Criterio{
     String titulo;
 
     public CriterioTituloIgual(String titulo){

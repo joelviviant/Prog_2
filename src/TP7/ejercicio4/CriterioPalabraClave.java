@@ -1,16 +1,14 @@
 package TP7.ejercicio4;
 
- public class CriterioPalabraClave extends Criterio{
+ public class CriterioPalabraClave implements Criterio{
     String palabraClave;
 
     public CriterioPalabraClave(String palabraClave){
         this.palabraClave=palabraClave;
-
-
     }
 
      @Override
      public boolean cumple(Documento d) {
-         return false;
+         return d.getPalabrasClave().contains(palabraClave);
      }
  }

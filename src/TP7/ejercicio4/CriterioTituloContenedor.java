@@ -1,6 +1,6 @@
 package TP7.ejercicio4;
 
-public class CriterioTituloContenedor extends Criterio{
+public class CriterioTituloContenedor implements Criterio{
     String palabra;
 
     public CriterioTituloContenedor(String palabra){

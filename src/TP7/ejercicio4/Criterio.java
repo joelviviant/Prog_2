@@ -1,5 +1,6 @@
 package TP7.ejercicio4;
 
-public abstract class Criterio {
-    public abstract boolean cumple(Documento d);
+public interface Criterio {
+    public  boolean cumple(Documento d);
+
 }
