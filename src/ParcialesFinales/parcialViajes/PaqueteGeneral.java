@@ -1,6 +1,10 @@
 package ParcialesFinales.parcialViajes;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 
 public abstract class PaqueteGeneral {
 
@@ -32,6 +36,14 @@ public abstract class PaqueteGeneral {
     public abstract String getDestino();
     public abstract double getCosto();
     public abstract LocalDate getFechaDePago();
+
+    public abstract ArrayList<PaqueteGeneral> buscar(Filtro f1);
+
+    public ArrayList<PaqueteGeneral> buscar(Filtro f1, Comparator<PaqueteGeneral> c1){
+         ArrayList<PaqueteGeneral> result = this.buscar(f1);
+        Collections.sort(result,c1);
+        return result;
+    }
 
 
 }

@@ -1,6 +1,7 @@
 package ParcialesFinales.parcialViajes;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Paquete extends PaqueteGeneral{
     private String alojamiento;
@@ -48,6 +49,15 @@ public class Paquete extends PaqueteGeneral{
     @Override
     public LocalDate getFechaDePago() {
         return fechaDePago;
+    }
+
+    @Override
+    public ArrayList<PaqueteGeneral> buscar(Filtro f1) {
+         ArrayList<PaqueteGeneral> result = new ArrayList<>();
+         if (f1.cumple(this)){
+             result.add(this);
+         }
+         return result;
     }
 }
 

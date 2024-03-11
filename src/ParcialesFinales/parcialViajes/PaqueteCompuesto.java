@@ -44,6 +44,19 @@ public class PaqueteCompuesto extends PaqueteGeneral{
         }return paquetes.get(paqueteFinal).getFechaDePago();
     }
 
+    @Override
+    public ArrayList<PaqueteGeneral> buscar(Filtro f1) {
+        ArrayList<PaqueteGeneral> result = new ArrayList<>();
+        if (f1.cumple(this)){
+            result.add(this);
+        }else {
+            ArrayList<PaqueteGeneral> paquetesCumplidores = new ArrayList<>();
+            for (PaqueteGeneral p : paquetes){
+                paquetesCumplidores.addAll(p.buscar(f1));
+            }
+        }return result;
+    }
+
     public void addPaquete(PaqueteGeneral paquete){
         if (paquete.getCantidadPersonas() == this.getCantidadPersonas()){
             if (paquetes.isEmpty()){
