@@ -54,7 +54,9 @@ public class PaqueteCompuesto extends PaqueteGeneral{
             for (PaqueteGeneral p : paquetes){
                 paquetesCumplidores.addAll(p.buscar(f1));
             }
-        }return result;
+            return paquetesCumplidores;
+        }
+        return new ArrayList<>();
     }
 
     public void addPaquete(PaqueteGeneral paquete){

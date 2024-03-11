@@ -17,4 +17,19 @@ public class InversionCompuesta extends InversionGeneral{
         }
         return suma-(suma*5/100);
     }
+
+    @Override
+    public ArrayList<InversionGeneral> buscar(Filtro f1) {
+        ArrayList<InversionGeneral> resultado = new ArrayList<>();
+        if (f1.cumple(this)){
+            resultado.add(this);
+        }else {
+            ArrayList<InversionGeneral> aux = new ArrayList<>();
+            for (InversionGeneral i: inversiones){
+                aux.addAll(i.buscar(f1));
+            }
+            return aux;
+        }
+        return new ArrayList<>();
+    }
 }

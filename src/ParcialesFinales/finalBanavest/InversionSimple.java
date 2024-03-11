@@ -1,5 +1,7 @@
 package ParcialesFinales.finalBanavest;
 
+import java.util.ArrayList;
+
 public class InversionSimple extends InversionGeneral{
     char simbolo;
 
@@ -11,6 +13,15 @@ public class InversionSimple extends InversionGeneral{
     @Override
     public int getUltimoValorOperado() {
         return ultimoValorOperado;
+    }
+
+    @Override
+    public ArrayList<InversionGeneral> buscar(Filtro f1) {
+        ArrayList<InversionGeneral> resultado = new ArrayList<>();
+        if (f1.cumple(this)){
+            resultado.add(this);
+        }
+        return resultado;
     }
 
 

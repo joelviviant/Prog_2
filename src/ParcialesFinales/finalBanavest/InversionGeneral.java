@@ -1,6 +1,8 @@
 package ParcialesFinales.finalBanavest;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public abstract class InversionGeneral {
     String nombre;
@@ -38,5 +40,14 @@ public abstract class InversionGeneral {
         double ultimoValorDeCierre = valoresDeCierre.getLast();
         return ultimoValorOperado-ultimoValorDeCierre/ultimoValorDeCierre;
     }
+
+    public abstract ArrayList<InversionGeneral> buscar(Filtro f1);
+
+    public ArrayList<InversionGeneral> buscar(Filtro f1, Comparator<InversionGeneral> c1){
+        ArrayList<InversionGeneral> resultado = new ArrayList<>();
+        Collections.sort(resultado,c1);
+        return resultado;
+    }
+
 
 }
