@@ -43,4 +43,15 @@ public class PaqueteCompuesto extends PaqueteGeneral{
             }
         }return paquetes.get(paqueteFinal).getFechaDePago();
     }
+
+    public void addPaquete(PaqueteGeneral paquete){
+        if (paquete.getCantidadPersonas() == this.getCantidadPersonas()){
+            if (paquetes.isEmpty()){
+                paquetes.add(paquete);
+            } else if (paquetes.getLast().getDestino() == paquete.getOrigen()){
+                paquetes.add(paquete);
+            }
+        }
+    }
+
 }
