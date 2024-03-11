@@ -2,7 +2,7 @@ package ParcialesFinales.parcialViajes;
 
 import java.time.LocalDate;
 
-public class PaquetePreViaje extends Paquete{
+public class PaquetePreViaje extends PaqueteGeneral{
     LocalDate inicio;
     LocalDate fin;
     double descuento;
