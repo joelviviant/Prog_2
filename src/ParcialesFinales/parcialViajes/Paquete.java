@@ -18,6 +18,36 @@ public class Paquete extends PaqueteGeneral{
         fechaDePago=null;
     }
 
+    public String getAlojamiento() {
+        return alojamiento;
+    }
 
+    public void setAlojamiento(String alojamiento) {
+        this.alojamiento = alojamiento;
+    }
+
+    public void setFechaDePago(LocalDate fechaDePago) {
+        this.fechaDePago = fechaDePago;
+    }
+
+    @Override
+    public String getOrigen() {
+        return  origen;
+    }
+
+    @Override
+    public String getDestino() {
+        return destino;
+    }
+
+    @Override
+    public double getCosto() {
+        return costo;
+    }
+
+    @Override
+    public LocalDate getFechaDePago() {
+        return fechaDePago;
+    }
 }
 

@@ -1,5 +1,6 @@
 package ParcialesFinales.parcialViajes;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class PaqueteCompuesto extends PaqueteGeneral{
@@ -8,5 +9,38 @@ public class PaqueteCompuesto extends PaqueteGeneral{
     public PaqueteCompuesto(int id, int cantidadPersonas) {
         super(id, cantidadPersonas);
         paquetes = new ArrayList<>();
+    }
+
+    @Override
+    public String getOrigen() {
+        if (!paquetes.isEmpty()){
+             return paquetes.get(0).getOrigen();
+        }return null;
+    }
+
+    @Override
+    public String getDestino() {
+        int size = paquetes.size()-1;
+        if (size>0){
+            return paquetes.get(size).getDestino();
+        }return  null;
+    }
+
+    @Override
+    public double getCosto() {
+        int suma=0;
+        for (PaqueteGeneral p: paquetes){
+            suma += p.getCosto();
+        }return suma;
+    }
+
+    @Override
+    public LocalDate getFechaDePago() {
+        int paqueteFinal= paquetes.size()-1;
+        for (PaqueteGeneral p: paquetes){
+            if (p.getFechaDePago() == null){
+                return null;
+            }
+        }return paquetes.get(paqueteFinal).getFechaDePago();
     }
 }
