@@ -1,5 +1,6 @@
-package ParcialesFinales.finalBanavest;
+package ParcialesFinales.finalBanavest.Filtros;
 
+import ParcialesFinales.finalBanavest.InversionGeneral;
 import ParcialesFinales.parcialViajes.PaqueteGeneral;
 
 public abstract class Filtro {

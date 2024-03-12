@@ -1,21 +1,34 @@
 package ParcialesFinales.finalBanavest;
 
+import ParcialesFinales.finalBanavest.Estrategias.Criterio;
+import ParcialesFinales.finalBanavest.Filtros.Filtro;
+
 import java.util.ArrayList;
 
 public class InversionCompuesta extends InversionGeneral{
+    double porcentajeGastos;
     ArrayList<InversionGeneral> inversiones;
-    public InversionCompuesta(String nombre, int ultimoValorOperado, double variacion) {
-        super(nombre, ultimoValorOperado, variacion);
+    public InversionCompuesta(String nombre, double porcentajeGastos, Criterio rentabilidad) {
+        super(nombre,rentabilidad);
         inversiones = new ArrayList<>();
+        this.porcentajeGastos=porcentajeGastos;
+    }
+
+    public double getPorcentajeGastos() {
+        return porcentajeGastos;
+    }
+
+    public void setPorcentajeGastos(double porcentajeGastos) {
+        this.porcentajeGastos = porcentajeGastos;
     }
 
     @Override
-    public int getUltimoValorOperado() {
+    public double getUltimoValorOperado() {
         int suma=0;
         for (InversionGeneral i: inversiones ){
             suma+=i.getUltimoValorOperado();
         }
-        return suma-(suma*5/100);
+        return suma-(suma*getPorcentajeGastos()/100);
     }
 
     @Override

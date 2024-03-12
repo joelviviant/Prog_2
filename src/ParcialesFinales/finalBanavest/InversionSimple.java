@@ -1,17 +1,27 @@
 package ParcialesFinales.finalBanavest;
 
+import ParcialesFinales.finalBanavest.Estrategias.Criterio;
+import ParcialesFinales.finalBanavest.Filtros.Filtro;
+
 import java.util.ArrayList;
 
 public class InversionSimple extends InversionGeneral{
     char simbolo;
+    int  ultimoValorOperado;
 
-    public InversionSimple(String nombre, int ultimoValorOperado, double variacion, char simbolo) {
-        super(nombre, ultimoValorOperado, variacion);
+
+    public InversionSimple(String nombre, int ultimoValorOperado, char simbolo,Criterio  rentabilidad ) {
+        super(nombre, rentabilidad);
         this.simbolo = simbolo;
+        this.ultimoValorOperado= ultimoValorOperado;
+    }
+
+    public void setUltimoValorOperado(int ultimoValorOperado) {
+        this.ultimoValorOperado = ultimoValorOperado;
     }
 
     @Override
-    public int getUltimoValorOperado() {
+    public double getUltimoValorOperado() {
         return ultimoValorOperado;
     }
 

@@ -1,4 +1,6 @@
-package ParcialesFinales.finalBanavest;
+package ParcialesFinales.finalBanavest.Comparadores;
+
+import ParcialesFinales.finalBanavest.InversionGeneral;
 
 import java.util.Comparator;
 

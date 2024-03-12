@@ -1,22 +1,32 @@
 package ParcialesFinales.finalBanavest;
 
+import ParcialesFinales.finalBanavest.Estrategias.Criterio;
+import ParcialesFinales.finalBanavest.Filtros.Filtro;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
 public abstract class InversionGeneral {
     String nombre;
-    int ultimoValorOperado;
-    ArrayList<Integer> valoresDeCierre;
-    double variacion;
+    ArrayList<Double> valoresDeCierre;
 
-    public InversionGeneral(String nombre, int ultimoValorOperado, double variacion) {
+    Criterio rentabilidad;
+
+
+    public InversionGeneral(String nombre,Criterio  rentabilidad) {
         this.nombre = nombre;
-        this.ultimoValorOperado = ultimoValorOperado;
-        this.variacion = variacion;
+        this.rentabilidad=rentabilidad;
         valoresDeCierre= new ArrayList<>();
     }
 
+    public void setRentabilidad(Criterio rentabilidad) {
+        this.rentabilidad = rentabilidad;
+    }
+
+    public boolean esRentable(){
+        return rentabilidad.esRentable(this);
+    }
     public String getNombre() {
         return nombre;
     }
@@ -25,14 +35,14 @@ public abstract class InversionGeneral {
         this.nombre = nombre;
     }
 
-    public abstract int getUltimoValorOperado() ;
+    public abstract double getUltimoValorOperado() ;
 
-    public ArrayList<Integer> getValoresDeCierre() {
-        return valoresDeCierre;
+    public ArrayList<Double> getValoresDeCierre() {
+        return new ArrayList<>(valoresDeCierre);
     }
 
-    public void addValorDeCierre(int ultimoValorOperado) {
-        valoresDeCierre.addFirst(ultimoValorOperado);
+    public void cerrarDia() {
+        valoresDeCierre.addFirst(getUltimoValorOperado());
     }
 
     public double getVariacion() {

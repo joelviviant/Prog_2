@@ -1,6 +1,9 @@
-package ParcialesFinales.finalBanavest;
+package ParcialesFinales.finalBanavest.Filtros;
 
-public class FiltroOr extends Filtro{
+import ParcialesFinales.finalBanavest.Filtros.Filtro;
+import ParcialesFinales.finalBanavest.InversionGeneral;
+
+public class FiltroOr extends Filtro {
     Filtro f1;
     Filtro f2;
 

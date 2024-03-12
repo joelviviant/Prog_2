@@ -1,6 +1,9 @@
-package ParcialesFinales.finalBanavest;
+package ParcialesFinales.finalBanavest.Filtros;
 
-public class FiltroNombre extends Filtro{
+import ParcialesFinales.finalBanavest.Filtros.Filtro;
+import ParcialesFinales.finalBanavest.InversionGeneral;
+
+public class FiltroNombre extends Filtro {
     String nombre;
 
     public FiltroNombre(String nombre){
