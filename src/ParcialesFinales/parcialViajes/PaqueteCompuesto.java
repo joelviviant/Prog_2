@@ -14,7 +14,7 @@ public class PaqueteCompuesto extends PaqueteGeneral{
     @Override
     public String getOrigen() {
         if (!paquetes.isEmpty()){
-             return paquetes.get(0).getOrigen();
+             return paquetes.getFirst().getOrigen();
         }return null;
     }
 

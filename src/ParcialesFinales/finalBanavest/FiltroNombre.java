@@ -9,6 +9,6 @@ public class FiltroNombre extends Filtro{
 
     @Override
     public boolean cumple(InversionGeneral i) {
-        return i.getNombre().equals(nombre);
+        return i.getNombre().contains(nombre);
     }
 }
