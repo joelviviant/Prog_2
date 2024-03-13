@@ -3,6 +3,7 @@ package ParcialesFinales.finalBanavest;
 import ParcialesFinales.finalBanavest.Estrategias.Criterio;
 import ParcialesFinales.finalBanavest.Filtros.Filtro;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -10,6 +11,7 @@ import java.util.Comparator;
 public abstract class InversionGeneral {
     String nombre;
     ArrayList<Double> valoresDeCierre;
+
 
     Criterio rentabilidad;
 
