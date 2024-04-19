@@ -31,5 +31,14 @@ public class Zoo {
         }
     }
 
+    public ArrayList<Jaula> getJaulasPorAnimal(Animal animal, Filtro f1) {
+        ArrayList<Jaula> jaulas = new ArrayList<>();
+        for (Jaula jaula : jaulas) {
+            if (jaula.jaulaApta(animal,f1)){
+                jaulas.add(jaula);
+            }
+        }
+        return jaulas;
+    }
 
 }

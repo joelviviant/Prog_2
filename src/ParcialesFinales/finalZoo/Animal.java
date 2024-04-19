@@ -45,4 +45,11 @@ public class Animal {
     public void setAltura(double altura) {
         this.altura = altura;
     }
+
+    public boolean animalApto(Jaula jaula, Filtro f1){
+        if (f1.cumple(this,jaula)){
+            return true;
+        }
+        return false;
+    }
 }

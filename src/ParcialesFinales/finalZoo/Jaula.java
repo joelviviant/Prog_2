@@ -58,7 +58,7 @@ public class Jaula {
     }
 
     public boolean jaulaApta(Animal animal, Filtro f1){
-        if (f1.cumple(animal)){
+        if (f1.cumple(animal,this)){
             return true;
         }
         return false;
