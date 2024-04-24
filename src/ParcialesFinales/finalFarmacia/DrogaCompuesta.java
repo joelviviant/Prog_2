@@ -12,6 +12,15 @@ public class DrogaCompuesta extends ElementoDroga{
     }
 
     @Override
+    public double getPrecio() {
+        double total=0;
+        for (ElementoDroga e : drogas){
+            total+=e.getPrecio();
+        }
+        return total;
+    }
+
+    @Override
     public void addAccionesTerapeuticas(String accionTerapeutica) {
         for(ElementoDroga e : drogas){
             if (!e.getAccionesTerapeuticas().contains(accionTerapeutica)){
