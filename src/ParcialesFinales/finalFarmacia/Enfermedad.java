@@ -13,7 +13,12 @@ public class Enfermedad {
     public String getNombre() {
         return nombre;
     }
-    public ArrayList<ElementoDroga> medicamentosAptos(Enfermedad enfermedad) {
-        ArrayList<ElementoDroga> medicamentos = new ArrayList<>();
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public ArrayList<String> getEstadoPatologico() {
+        return new ArrayList<>(estadoPatologico);
     }
 }
