@@ -10,6 +10,14 @@ public class DrogaSimple extends ElementoDroga{
     }
 
     @Override
+    public double getPrecio() {
+        return precio;
+    }
+    public void setPrecio(double precio){
+        this.precio=precio;
+    }
+
+    @Override
     public void addAccionesTerapeuticas(String accionTerapeutica) {
         if (!accionesTerapeuticas.contains(accionTerapeutica)) {
             accionesTerapeuticas.add(accionTerapeutica);

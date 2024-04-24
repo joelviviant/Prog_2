@@ -35,11 +35,26 @@ public class DrogaCompuesta extends ElementoDroga{
 
     @Override
     public ArrayList<String> getAccionesTerapeuticas() {
-        return null;
+        ArrayList<String> resultado =  new ArrayList<>();
+        for (ElementoDroga d : drogas){
+           ArrayList<String> acciones = d.getAccionesTerapeuticas();
+           if (!resultado.contains(acciones)){
+               resultado.addAll(acciones);
+           }
+        }
+        return resultado;
     }
 
     @Override
     public ArrayList<String> getContraindicaciones() {
-        return null;
+        ArrayList<String> resultado = new ArrayList<>();
+        for (ElementoDroga d: drogas){
+            ArrayList<String>  contraIndicaciones = d.getContraindicaciones();
+            if (!resultado.contains(contraIndicaciones)){
+                resultado.addAll(contraIndicaciones);
+            }
+        }
+        return resultado;
     }
+
 }

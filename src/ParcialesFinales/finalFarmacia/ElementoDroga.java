@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public abstract class ElementoDroga {
     String nombre;
+    double precio;
     ArrayList<String> accionesTerapeuticas;
     ArrayList<String> contraindicaciones;
 
@@ -15,6 +16,7 @@ public abstract class ElementoDroga {
     public String getNombre() {
         return nombre;
     }
+    public abstract double getPrecio();
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -23,4 +25,5 @@ public abstract class ElementoDroga {
     public abstract void addContraindicaciones(String contraindicacion);
     public abstract ArrayList<String> getAccionesTerapeuticas();
     public abstract ArrayList<String> getContraindicaciones();
+
 }
